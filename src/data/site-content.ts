@@ -223,9 +223,9 @@ export const gallery = [
     caption: "Soin du visage sur-mesure",
   },
   {
-    src: "https://images.pexels.com/photos/5240734/pexels-photo-5240734.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    alt: "Mains posées avec douceur lors d'une séance de massage énergétique Reiki",
-    caption: "Séance de Reiki",
+    src: "https://res.cloudinary.com/planity/image/upload/f_auto,q_auto,w_1600/tzcjduhdgjfx39zvptiz",
+    alt: "Soin du visage relaxant dans une chambre de soin chaleureuse, fleurs séchées et bougies",
+    caption: "Un instant de détente",
   },
   {
     src: "https://images.pexels.com/photos/6629548/pexels-photo-6629548.jpeg?auto=compress&cs=tinysrgb&w=1600",
