@@ -5,6 +5,7 @@ import { Services } from "@/components/sections/Services";
 import { Reassurance } from "@/components/sections/Reassurance";
 import { Reviews } from "@/components/sections/Reviews";
 import { Gallery } from "@/components/sections/Gallery";
+import { Location } from "@/components/sections/Location";
 import { Contact } from "@/components/sections/Contact";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Reassurance />
         <Reviews />
         <Gallery />
+        <Location />
         <Contact />
       </main>
       <Footer />

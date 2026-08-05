@@ -165,5 +165,6 @@ export const nav = [
   { href: "#prestations", label: "Prestations" },
   { href: "#institut", label: "L'institut" },
   { href: "#avis", label: "Avis" },
+  { href: "#acces", label: "Accès" },
   { href: "#contact", label: "Contact" },
 ] as const;

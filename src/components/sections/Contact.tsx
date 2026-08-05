@@ -3,13 +3,13 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Phone, MapPin, Clock, CheckCircle2 } from "lucide-react";
+import { Phone, CheckCircle2 } from "lucide-react";
 import { InstagramIcon } from "@/components/icons/InstagramIcon";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { business, hours } from "@/data/site-content";
+import { business } from "@/data/site-content";
 import { fadeInUp, reveal } from "@/lib/motion";
 
 const schema = z.object({
@@ -94,31 +94,6 @@ export function Contact() {
                 Par téléphone ou via le formulaire, {business.practitioner} vous répond pour
                 convenir d'un rendez-vous.
               </p>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card p-6">
-              <div className="mb-3 flex items-center gap-2.5 text-primary">
-                <MapPin className="size-5" strokeWidth={1.8} />
-                <span className="text-sm font-semibold text-foreground">Adresse</span>
-              </div>
-              <p className="text-sm text-muted-foreground">
-                {business.address.street}, {business.address.postalCode} {business.address.city}
-              </p>
-            </div>
-
-            <div className="rounded-2xl border border-border bg-card p-6">
-              <div className="mb-3 flex items-center gap-2.5 text-primary">
-                <Clock className="size-5" strokeWidth={1.8} />
-                <span className="text-sm font-semibold text-foreground">Horaires</span>
-              </div>
-              <dl className="flex flex-col gap-1.5">
-                {hours.map((row) => (
-                  <div key={row.days} className="flex items-baseline justify-between gap-4 text-sm">
-                    <dt className="text-muted-foreground">{row.days}</dt>
-                    <dd className="font-medium text-foreground">{row.hours}</dd>
-                  </div>
-                ))}
-              </dl>
             </div>
 
             <a
