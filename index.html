@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'Équilibre — Institut de beauté &amp; Reiki à Cormeilles-en-Parisis</title>
+    <meta
+      name="description"
+      content="L'Équilibre, institut de beauté tenu par Angélique à Cormeilles-en-Parisis. Soins du visage, massages énergétiques Reiki, épilations, beauté des mains, pieds et du regard. Sur rendez-vous, 7j/7."
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BeautySalon",
+        "name": "L'Équilibre",
+        "description": "Institut de beauté et Reiki tenu par Angélique, esthéticienne et praticienne Reiki, à Cormeilles-en-Parisis.",
+        "telephone": "+33650776347",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "17 Rue Gabriel Péri",
+          "postalCode": "95240",
+          "addressLocality": "Cormeilles-en-Parisis",
+          "addressCountry": "FR"
+        },
+        "areaServed": ["Cormeilles-en-Parisis", "Herblay", "Pierrelaye", "Val d'Oise"],
+        "sameAs": ["https://www.instagram.com/equilibre_soins_reiki"],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "27"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:00",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Sunday"],
+            "opens": "09:00",
+            "closes": "19:00"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!--
+      Formulaire statique invisible, requis pour que Netlify détecte le
+      formulaire "contact" au build (le formulaire réel, rendu par React,
+      poste vers "/" en JS — voir Contact.tsx et la doc Netlify Forms
+      sur les formulaires générés côté client).
+    -->
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="nom" />
+      <input type="tel" name="telephone" />
+      <textarea name="message"></textarea>
+      <input type="checkbox" name="consentement" />
+      <input type="text" name="bot-field" />
+    </form>
+  </body>
+</html>
