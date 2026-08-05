@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Flower2, Menu, Phone, CalendarHeart } from "lucide-react";
+import { Menu, Phone, CalendarHeart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -35,9 +35,13 @@ export function Navbar() {
           className="flex min-w-0 items-center gap-2.5"
           aria-label="Retour à l'accueil L'Équilibre"
         >
-          <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
-            <Flower2 className="size-4.5" strokeWidth={1.8} />
-          </span>
+          <img
+            src="/angelique/logo.jpg"
+            alt="Logo L'Équilibre"
+            className="size-9 shrink-0 rounded-full border border-border object-cover"
+            width={36}
+            height={36}
+          />
           <span className="min-w-0 leading-tight">
             <span className="block truncate font-display text-xl tracking-tight text-foreground">
               {business.name}

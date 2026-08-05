@@ -1,8 +1,9 @@
 // Données vérifiées le 05/08/2026 via la fiche Planity de l'institut
-// (planity.com/lequilibre-95240-cormeilles-en-parisis) et la fiche Google
-// "Équilibre Soins Reiki – Soins, Massage & Épilations" (Google Maps).
-// Recoupées avec audit.md. Aucune information non confirmée par ces
-// sources n'est utilisée (pas d'ancienneté ni de certification inventée).
+// (planity.com/lequilibre-95240-cormeilles-en-parisis), la fiche Google
+// "Équilibre Soins Reiki – Soins, Massage & Épilations" (Google Maps) et le
+// compte Instagram officiel @equilibre_soins_reiki. Recoupées avec
+// audit.md. Aucune information non confirmée par ces sources n'est
+// utilisée.
 
 export const business = {
   name: "L'Équilibre",
@@ -73,8 +74,8 @@ export const services = [
     priceFrom: "10 €",
     featured: false,
     image: {
-      src: "https://images.pexels.com/photos/35103884/pexels-photo-35103884.jpeg?auto=compress&cs=tinysrgb&w=1200",
-      alt: "Épilation réalisée avec soin en institut de beauté",
+      src: "/angelique/epilation.jpg",
+      alt: "Pince à épiler tenue avec précision, épilation à la cire traditionnelle",
     },
   },
   {
@@ -112,18 +113,19 @@ export const services = [
   },
 ] as const;
 
-// Photo issue de la galerie Planity de l'institut (public ID Cloudinary
-// o69tcidjiyjwdlquf8bx) — la seule des 6 montrant clairement Angélique en
-// situation de soin plutôt que ses seules mains. Bio reformulée à partir de
-// sa présentation publiée sur Planity, pas recopiée verbatim.
+// Photo issue du post "Qui je suis" du compte Instagram officiel de
+// l'institut (@equilibre_soins_reiki) — portrait clair d'Angélique,
+// hébergé localement (public/angelique/) plutôt qu'en lien direct vers le
+// CDN Instagram, dont les URLs signées expirent. Bio reformulée à partir de
+// ce même post et de sa présentation Planity — jamais recopiée verbatim.
 export const about = {
   photo: {
-    src: "https://res.cloudinary.com/planity/image/upload/f_auto,q_auto,w_1200/o69tcidjiyjwdlquf8bx",
-    alt: "Angélique réalisant un massage des jambes dans son institut",
+    src: "/angelique/portrait.jpg",
+    alt: "Portrait d'Angélique, esthéticienne et praticienne Reiki",
   },
   bio: [
-    "Esthéticienne et praticienne Reiki, j'accompagne chaque personne, homme ou femme, à travers des soins où beauté, énergie et conscience se rencontrent.",
-    "Chaque soin est personnalisé pour offrir un moment de lâcher-prise, dans un espace calme et bienveillant.",
+    "Depuis plus de 20 ans, je pratique les soins du corps ; les énergies ont toujours fait partie de mon parcours. Depuis près de 10 ans, j'ai élargi cette pratique vers une approche plus globale du bien-être, entre corps, mental et énergie.",
+    "J'accompagne chaque personne, homme ou femme, avec son histoire et son rythme. Je crois profondément que le corps sait se réguler naturellement dès qu'on lui offre les bonnes conditions — c'est ce que je m'attache à créer à chaque soin.",
   ],
 } as const;
 
@@ -161,8 +163,8 @@ export const faq = [
 // fiche Planity — reformulée, pas recopiée verbatim.
 export const reassurance = [
   {
-    title: "Double expertise",
-    description: "Esthéticienne diplômée et praticienne Reiki, pour une approche à la fois technique et énergétique.",
+    title: "Plus de 20 ans d'expérience",
+    description: "Esthéticienne et praticienne Reiki, une double expertise technique et énergétique pratiquée depuis plus de 20 ans.",
   },
   {
     title: "5,0/5 sur 27 avis",

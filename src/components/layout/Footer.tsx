@@ -1,4 +1,3 @@
-import { Flower2 } from "lucide-react";
 import { InstagramIcon } from "@/components/icons/InstagramIcon";
 import { business, nav } from "@/data/site-content";
 
@@ -9,9 +8,13 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-[1.3fr_1fr_1fr]">
           <div>
             <div className="mb-3 flex items-center gap-2.5">
-              <span className="flex size-8 items-center justify-center rounded-full bg-primary text-white">
-                <Flower2 className="size-4" strokeWidth={1.8} />
-              </span>
+              <img
+                src="/angelique/logo.jpg"
+                alt="Logo L'Équilibre"
+                className="size-8 rounded-full border border-white/15 object-cover"
+                width={32}
+                height={32}
+              />
               <span className="font-display text-lg tracking-tight text-white">
                 {business.name}
               </span>
