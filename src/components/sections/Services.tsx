@@ -30,32 +30,43 @@ export function Services() {
         <motion.div
           variants={staggerContainer}
           {...reveal(reducedMotion)}
-          className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           {services.map((service, i) => {
             const Icon = icons[i];
             return (
               <motion.div key={service.title} variants={fadeInUp}>
                 <Card
-                  className={`relative h-full gap-4 rounded-2xl border-border p-7 shadow-none transition-all hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_20px_40px_-18px_rgba(56,44,33,0.18)] ${
-                    service.featured ? "border-accent/40 bg-gradient-to-br from-tint to-card" : ""
+                  className={`h-full gap-0 overflow-hidden rounded-2xl border-border p-0 shadow-none transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_-18px_rgba(56,44,33,0.22)] ${
+                    service.featured ? "border-accent/40" : ""
                   }`}
                 >
-                  {service.featured && (
-                    <span className="absolute top-6 right-6 rounded-full bg-accent/12 px-2.5 py-1 text-[0.65rem] font-bold tracking-[0.1em] text-accent uppercase">
-                      Spécialité
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <img
+                      src={service.image.src}
+                      alt={service.image.alt}
+                      loading="lazy"
+                      className="size-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/0 to-black/0" />
+                    <span className="absolute top-4 left-4 flex size-10 items-center justify-center rounded-full bg-white/90 text-primary backdrop-blur">
+                      <Icon className="size-5" strokeWidth={1.8} />
                     </span>
-                  )}
-                  <div className="flex size-12 items-center justify-center rounded-xl bg-tint text-primary">
-                    <Icon className="size-6" strokeWidth={1.7} />
+                    {service.featured && (
+                      <span className="absolute top-4 right-4 rounded-full bg-accent px-2.5 py-1 text-[0.65rem] font-bold tracking-[0.1em] text-accent-foreground uppercase">
+                        Spécialité
+                      </span>
+                    )}
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground">{service.title}</h3>
-                  <p className="text-[0.95rem] leading-relaxed text-muted-foreground">
-                    {service.description}
-                  </p>
-                  <span className="mt-auto text-sm font-semibold text-primary">
-                    Dès {service.priceFrom}
-                  </span>
+                  <div className="flex flex-col gap-3 p-6">
+                    <h3 className="text-xl font-semibold text-foreground">{service.title}</h3>
+                    <p className="text-[0.95rem] leading-relaxed text-muted-foreground">
+                      {service.description}
+                    </p>
+                    <span className="text-sm font-semibold text-primary">
+                      Dès {service.priceFrom}
+                    </span>
+                  </div>
                 </Card>
               </motion.div>
             );

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Flower2, Menu, Phone } from "lucide-react";
+import { Flower2, Menu, Phone, CalendarHeart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -63,12 +63,24 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <Button
             asChild
-            size="lg"
-            className="hidden h-11 rounded-full bg-primary px-5 text-primary-foreground shadow-[0_10px_24px_-10px_rgba(183,94,51,0.6)] hover:bg-primary/90 sm:inline-flex"
+            variant="outline"
+            size="icon"
+            className="hidden size-11 rounded-full border-border lg:inline-flex"
+            aria-label={`Appeler l'institut au ${business.phone}`}
           >
             <a href={business.phoneHref}>
               <Phone className="size-4" />
-              {business.phone}
+            </a>
+          </Button>
+
+          <Button
+            asChild
+            size="lg"
+            className="hidden h-11 rounded-full bg-primary px-5 text-primary-foreground shadow-[0_10px_24px_-10px_rgba(183,94,51,0.6)] hover:bg-primary/90 sm:inline-flex"
+          >
+            <a href={business.bookingHref} target="_blank" rel="noreferrer">
+              <CalendarHeart className="size-4" />
+              Réserver en ligne
             </a>
           </Button>
 
@@ -101,8 +113,14 @@ export function Navbar() {
                   </SheetClose>
                 ))}
               </nav>
-              <div className="mt-auto p-4">
+              <div className="mt-auto flex flex-col gap-2.5 p-4">
                 <Button asChild className="h-12 w-full rounded-full bg-primary text-base text-primary-foreground hover:bg-primary/90">
+                  <a href={business.bookingHref} target="_blank" rel="noreferrer">
+                    <CalendarHeart className="size-4" />
+                    Réserver en ligne
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="h-12 w-full rounded-full border-border text-base">
                   <a href={business.phoneHref}>
                     <Phone className="size-4" />
                     Appeler {business.practitioner}

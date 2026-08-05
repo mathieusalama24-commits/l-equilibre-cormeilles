@@ -83,9 +83,9 @@ export function Hero() {
               size="lg"
               className="h-14 rounded-full bg-primary px-7 text-base font-semibold text-primary-foreground shadow-[0_16px_32px_-10px_rgba(183,94,51,0.55)] hover:bg-primary/90"
             >
-              <a href={business.phoneHref}>
-                <Phone className="size-5" />
-                Appeler l'institut
+              <a href={business.bookingHref} target="_blank" rel="noreferrer">
+                <CalendarHeart className="size-5" />
+                Réserver en ligne
               </a>
             </Button>
             <Button
@@ -94,9 +94,9 @@ export function Hero() {
               size="lg"
               className="h-14 rounded-full border-border bg-background px-7 text-base font-semibold hover:bg-muted"
             >
-              <a href="#contact">
-                <CalendarHeart className="size-5" />
-                Prendre rendez-vous
+              <a href={business.phoneHref}>
+                <Phone className="size-5" />
+                Appeler l'institut
               </a>
             </Button>
           </motion.div>

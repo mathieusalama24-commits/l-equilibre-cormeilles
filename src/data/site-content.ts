@@ -14,6 +14,7 @@ export const business = {
   phoneHref: "tel:+33650776347",
   instagramHandle: "@equilibre_soins_reiki",
   instagramHref: "https://www.instagram.com/equilibre_soins_reiki",
+  bookingHref: "https://www.planity.com/lequilibre-95240-cormeilles-en-parisis",
   address: {
     street: "17 Rue Gabriel Péri",
     postalCode: "95240",
@@ -36,6 +37,12 @@ export const heroStats = [
   { value: "2", label: "Savoir-faire : esthétique & Reiki" },
 ] as const;
 
+// Photos : 4 proviennent de la propre galerie Planity de l'institut (CDN
+// Cloudinary public de Planity, photos publiées par l'établissement lui-même
+// pour sa fiche professionnelle) — cadrées sur les mains/gestes pour ne
+// montrer aucun visage de cliente identifiable. Les 2 restantes (épilation,
+// regard) viennent de Pexels, faute d'équivalent dans sa galerie, vérifiées
+// HTTP 200 et cohérentes avec la prestation réelle.
 export const services = [
   {
     title: "Soins du visage",
@@ -43,6 +50,10 @@ export const services = [
       "Nettoyage de peau, rituels hydratants et liftants pour révéler l'éclat naturel du visage.",
     priceFrom: "55 €",
     featured: false,
+    image: {
+      src: "https://images.pexels.com/photos/37229301/pexels-photo-37229301.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Soin du visage appliqué avec douceur",
+    },
   },
   {
     title: "Massage & Énergie Reiki",
@@ -50,6 +61,10 @@ export const services = [
       "Massages relaxants et séances de Reiki, un soin énergétique par apposition des mains pour harmoniser le corps et l'esprit.",
     priceFrom: "30 €",
     featured: true,
+    image: {
+      src: "https://res.cloudinary.com/planity/image/upload/f_auto,q_auto,w_1200/xmti01zaawicfeykkcfv",
+      alt: "Séance de Reiki, soin énergétique par apposition des mains",
+    },
   },
   {
     title: "Épilations",
@@ -57,6 +72,10 @@ export const services = [
       "Épilations femme et homme, à l'unité ou en forfaits combinés, dans le respect des peaux sensibles.",
     priceFrom: "10 €",
     featured: false,
+    image: {
+      src: "https://images.pexels.com/photos/35103884/pexels-photo-35103884.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Épilation réalisée avec soin en institut de beauté",
+    },
   },
   {
     title: "Beauté des mains & pieds",
@@ -64,6 +83,10 @@ export const services = [
       "Manucure, beauté des pieds et pose de vernis semi-permanent pour des mains et des pieds soignés.",
     priceFrom: "15 €",
     featured: false,
+    image: {
+      src: "https://res.cloudinary.com/planity/image/upload/f_auto,q_auto,w_1200/xhdapgv6enugzzktdjyv",
+      alt: "Massage des pieds réalisé avec douceur",
+    },
   },
   {
     title: "Beauté du regard",
@@ -71,6 +94,10 @@ export const services = [
       "Teinture cils et sourcils, rehaussement de cils, pour un regard mis en valeur avec douceur.",
     priceFrom: "15 €",
     featured: false,
+    image: {
+      src: "https://images.pexels.com/photos/7446904/pexels-photo-7446904.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Teinture des sourcils appliquée au pinceau",
+    },
   },
   {
     title: "Minceur",
@@ -78,6 +105,55 @@ export const services = [
       "Palper rouler manuel et radiofréquence pour accompagner vos objectifs silhouette.",
     priceFrom: "35 €",
     featured: false,
+    image: {
+      src: "https://res.cloudinary.com/planity/image/upload/f_auto,q_auto,w_1200/kdsztrej3ejgum28gj5j",
+      alt: "Soin palper-rouler manuel réalisé sur la jambe",
+    },
+  },
+] as const;
+
+// Photo issue de la galerie Planity de l'institut (public ID Cloudinary
+// o69tcidjiyjwdlquf8bx) — la seule des 6 montrant clairement Angélique en
+// situation de soin plutôt que ses seules mains. Bio reformulée à partir de
+// sa présentation publiée sur Planity, pas recopiée verbatim.
+export const about = {
+  photo: {
+    src: "https://res.cloudinary.com/planity/image/upload/f_auto,q_auto,w_1200/o69tcidjiyjwdlquf8bx",
+    alt: "Angélique réalisant un massage des jambes dans son institut",
+  },
+  bio: [
+    "Esthéticienne et praticienne Reiki, j'accompagne chaque personne, homme ou femme, à travers des soins où beauté, énergie et conscience se rencontrent.",
+    "Chaque soin est personnalisé pour offrir un moment de lâcher-prise, dans un espace calme et bienveillant.",
+  ],
+} as const;
+
+// Uniquement des faits confirmés par la fiche Planity de l'institut
+// (réservation, paiement, horaires) et par sa présentation ("j'accompagne
+// chaque personne homme ou femme") — rien n'est inventé (pas de politique
+// d'annulation ni d'information non vérifiée).
+export const faq = [
+  {
+    question: "Faut-il prendre rendez-vous ?",
+    answer:
+      "Oui, tous les soins se font sur rendez-vous. Vous pouvez réserver en ligne à tout moment sur Planity (confirmation immédiate) ou appeler directement l'institut au 06 50 77 63 47.",
+  },
+  {
+    question: "Comment se passe le paiement ?",
+    answer: "Le paiement se fait sur place, à l'institut, à l'issue de votre soin.",
+  },
+  {
+    question: "Qu'est-ce qu'une séance de Reiki concrètement ?",
+    answer:
+      "Un soin énergétique japonais réalisé par apposition des mains, pour harmoniser le corps et l'esprit — un moment de détente profonde, sans geste technique invasif.",
+  },
+  {
+    question: "L'institut accueille-t-il aussi les hommes ?",
+    answer:
+      "Oui, Angélique accompagne chaque personne, homme ou femme — épilations, soins du visage, massages et Reiki sont proposés aux deux.",
+  },
+  {
+    question: "Quels sont les horaires d'ouverture ?",
+    answer: "Du lundi au samedi de 9h à 21h, et le dimanche de 9h à 19h, sur rendez-vous.",
   },
 ] as const;
 
@@ -163,7 +239,7 @@ export const gallery = [
 
 export const nav = [
   { href: "#prestations", label: "Prestations" },
-  { href: "#institut", label: "L'institut" },
+  { href: "#angelique", label: "Angélique" },
   { href: "#avis", label: "Avis" },
   { href: "#acces", label: "Accès" },
   { href: "#contact", label: "Contact" },

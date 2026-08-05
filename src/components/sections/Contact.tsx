@@ -3,7 +3,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Phone, CheckCircle2 } from "lucide-react";
+import { Phone, CalendarHeart, CheckCircle2 } from "lucide-react";
 import { InstagramIcon } from "@/components/icons/InstagramIcon";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -79,6 +79,25 @@ export function Contact() {
             {...reveal(reducedMotion)}
             className="flex flex-col gap-5"
           >
+            <div className="rounded-2xl bg-primary p-7 text-primary-foreground">
+              <span className="mb-3 block text-xs font-bold uppercase tracking-[0.14em] text-white/70">
+                Réservation en ligne
+              </span>
+              <p className="mb-4 text-sm text-white/85">
+                Choisissez votre créneau 24h/24 sur Planity — confirmation immédiate, paiement sur
+                place.
+              </p>
+              <Button
+                asChild
+                className="h-12 w-full rounded-full bg-white text-base font-semibold text-primary hover:bg-white/90"
+              >
+                <a href={business.bookingHref} target="_blank" rel="noreferrer">
+                  <CalendarHeart className="size-5" />
+                  Réserver un créneau
+                </a>
+              </Button>
+            </div>
+
             <div className="rounded-2xl bg-secondary p-7 text-secondary-foreground">
               <span className="mb-3 block text-xs font-bold uppercase tracking-[0.14em] text-white/60">
                 Téléphone
